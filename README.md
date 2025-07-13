@@ -3,246 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Profile README Generator</title>
+    <title>Saddam Hossain - GitHub Profile</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            background-color: #0d1117;
+            color: #c9d1d9;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            color: #333;
-            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
         }
         h1 {
-            color: #0366d6;
-            text-align: center;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
+            color: #58a6ff;
             margin-bottom: 5px;
-            font-weight: bold;
         }
-        input, textarea, select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-family: inherit;
+        .title {
+            color: #8b949e;
+            font-size: 1.2em;
+            margin-top: 0;
         }
-        textarea {
-            min-height: 100px;
-            resize: vertical;
+        .about {
+            background-color: #161b22;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #30363d;
         }
-        button {
-            background: #0366d6;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
+        .section {
+            margin-bottom: 25px;
         }
-        button:hover {
-            background: #0056b3;
+        h2 {
+            color: #58a6ff;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 5px;
         }
-        #output {
-            margin-top: 20px;
-            padding: 15px;
-            background: #f8f9fa;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            white-space: pre-wrap;
-            font-family: monospace;
-        }
-        .skill-item {
+        .skills-container {
             display: flex;
-            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
-        .skill-item input {
+        .skill-category {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 10px 15px;
             flex: 1;
-            margin-right: 10px;
+            min-width: 200px;
         }
-        .remove-skill {
-            background: #dc3545;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+        .skill-category h3 {
+            margin-top: 0;
+            color: #c9d1d9;
+        }
+        .contact-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .contact-links a {
+            color: #58a6ff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            color: #58a6ff;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>GitHub Profile README Generator</h1>
-        
-        <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Saddam Hossain">
-        </div>
-        
-        <div class="form-group">
-            <label for="title">Professional Title</label>
-            <input type="text" id="title" placeholder="Applied Mathematics Student | Data Science Enthusiast">
-        </div>
-        
-        <div class="form-group">
-            <label for="about">About You</label>
-            <textarea id="about" placeholder="Passionate about Machine Learning, Deep Learning, SQL, and Power BI..."></textarea>
-        </div>
-        
-        <div class="form-group">
-            <label>Skills</label>
-            <div id="skills-container">
-                <div class="skill-item">
-                    <input type="text" placeholder="Category (e.g., Programming)" class="skill-category">
-                    <input type="text" placeholder="Skills (e.g., Python, SQL)" class="skill-items">
-                    <button type="button" class="remove-skill">×</button>
-                </div>
+    <div class="profile-header">
+        <h1>Saddam Hossain</h1>
+        <p class="title">Applied Mathematics Student | Data Science Enthusiast</p>
+    </div>
+
+    <div class="about">
+        <p>I'm a passionate student of Applied Mathematics currently exploring the fascinating world of <span class="highlight">Machine Learning</span>, <span class="highlight">Deep Learning</span>, and <span class="highlight">Data Science</span>. My technical toolkit includes:</p>
+        <ul>
+            <li><span class="highlight">Power BI</span> for data visualization and business intelligence</li>
+            <li><span class="highlight">SQL</span> for database management and querying</li>
+            <li>Mathematical modeling and statistical analysis</li>
+            <li>Python programming for data science applications</li>
+        </ul>
+        <p>I'm particularly interested in how mathematical concepts can be applied to solve real-world data problems and create intelligent systems.</p>
+    </div>
+
+    <div class="section">
+        <h2>🛠 Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Data Science</h3>
+                <ul>
+                    <li>Python (Pandas, NumPy)</li>
+                    <li>Data Visualization</li>
+                    <li>Statistical Analysis</li>
+                </ul>
             </div>
-            <button type="button" id="add-skill">+ Add Skill</button>
-        </div>
-        
-        <div class="form-group">
-            <label for="education">Education</label>
-            <input type="text" id="education" placeholder="BSc in Applied Mathematics">
-        </div>
-        
-        <div class="form-group">
-            <label for="projects">Projects Link</label>
-            <input type="text" id="projects" placeholder="https://github.com/yourusername?tab=repositories">
-        </div>
-        
-        <div class="form-group">
-            <label>Contact Info</label>
-            <div id="contact-container">
-                <div class="skill-item">
-                    <input type="text" placeholder="Platform (e.g., Email)" class="contact-platform">
-                    <input type="text" placeholder="Link/Info (e.g., you@example.com)" class="contact-link">
-                    <button type="button" class="remove-contact">×</button>
-                </div>
+            <div class="skill-category">
+                <h3>Machine Learning</h3>
+                <ul>
+                    <li>Scikit-learn</li>
+                    <li>TensorFlow/PyTorch</li>
+                    <li>Model Evaluation</li>
+                </ul>
             </div>
-            <button type="button" id="add-contact">+ Add Contact</button>
-        </div>
-        
-        <button type="button" id="generate">Generate README</button>
-        
-        <div class="form-group">
-            <label for="output">Your GitHub README.md</label>
-            <textarea id="output" readonly></textarea>
+            <div class="skill-category">
+                <h3>Data Tools</h3>
+                <ul>
+                    <li>Power BI</li>
+                    <li>SQL</li>
+                    <li>Excel</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <script>
-        // Add new skill row
-        document.getElementById('add-skill').addEventListener('click', function() {
-            const div = document.createElement('div');
-            div.className = 'skill-item';
-            div.innerHTML = `
-                <input type="text" placeholder="Category (e.g., Programming)" class="skill-category">
-                <input type="text" placeholder="Skills (e.g., Python, SQL)" class="skill-items">
-                <button type="button" class="remove-skill">×</button>
-            `;
-            document.getElementById('skills-container').appendChild(div);
-            addRemoveListeners();
-        });
+    <div class="section">
+        <h2>📚 Academic Background</h2>
+        <p>Currently pursuing my degree in <span class="highlight">Applied Mathematics</span>, focusing on mathematical modeling and computational methods that form the foundation of machine learning algorithms and data analysis techniques.</p>
+    </div>
 
-        // Add new contact row
-        document.getElementById('add-contact').addEventListener('click', function() {
-            const div = document.createElement('div');
-            div.className = 'skill-item';
-            div.innerHTML = `
-                <input type="text" placeholder="Platform (e.g., Email)" class="contact-platform">
-                <input type="text" placeholder="Link/Info (e.g., you@example.com)" class="contact-link">
-                <button type="button" class="remove-contact">×</button>
-            `;
-            document.getElementById('contact-container').appendChild(div);
-            addRemoveListeners();
-        });
+    <div class="section">
+        <h2>📫 Let's Connect</h2>
+        <div class="contact-links">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            <a href="mailto:youremail@example.com">Email</a>
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+        </div>
+    </div>
 
-        // Add event listeners to remove buttons
-        function addRemoveListeners() {
-            document.querySelectorAll('.remove-skill').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    this.parentElement.remove();
-                });
-            });
-            document.querySelectorAll('.remove-contact').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    this.parentElement.remove();
-                });
-            });
-        }
-
-        // Initial setup
-        addRemoveListeners();
-
-        // Generate README
-        document.getElementById('generate').addEventListener('click', function() {
-            const name = document.getElementById('name').value || 'Your Name';
-            const title = document.getElementById('title').value || 'Your Title';
-            const about = document.getElementById('about').value || 'A short bio about yourself...';
-            const education = document.getElementById('education').value || 'Your education background';
-            const projects = document.getElementById('projects').value || 'https://github.com/yourusername';
-
-            // Process skills
-            let skillsMarkdown = '';
-            document.querySelectorAll('.skill-item').forEach(item => {
-                const category = item.querySelector('.skill-category')?.value;
-                const items = item.querySelector('.skill-items')?.value;
-                if (category && items) {
-                    skillsMarkdown += `- **${category}:** ${items}\n`;
-                }
-            });
-
-            // Process contacts
-            let contactsMarkdown = '';
-            document.querySelectorAll('.skill-item').forEach(item => {
-                const platform = item.querySelector('.contact-platform')?.value;
-                const link = item.querySelector('.contact-link')?.value;
-                if (platform && link) {
-                    if (link.startsWith('http') || link.includes('@')) {
-                        contactsMarkdown += `- [${platform}](${link})\n`;
-                    } else {
-                        contactsMarkdown += `- **${platform}:** ${link}\n`;
-                    }
-                }
-            });
-
-            // Generate the README content
-            const readmeContent = `# 👋 Hello, I'm ${name}
-
-### ${title}
-
-${about}
-
-## 🛠️ Skills
-${skillsMarkdown || 'Add your skills above'}
-
-## 🎓 Education
-- ${education}
-
-## 🚀 Projects
-Check out my projects [here](${projects})!
-
-## 📫 Contact Me
-${contactsMarkdown || 'Add your contact info above'}
-
----
-⚡ **Fun Fact:** I love turning complex problems into simple solutions!
-`;
-
-            document.getElementById('output').value = readmeContent;
-        });
-    </script>
+    <div class="section">
+        <p><em>"Turning mathematical abstractions into practical data solutions."</em></p>
+    </div>
 </body>
 </html>
